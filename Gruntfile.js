@@ -25,7 +25,7 @@ module.exports = function(grunt) {
   watch: {
   scripts: {
     files: ['scripts/**/*.js'],
-    tasks: ['jshint'],
+    tasks: ['validate'],
     options: {
       spawn: false,
     },
@@ -65,6 +65,9 @@ module.exports = function(grunt) {
               'views/home.html'
              ]
     }
+  },
+  concurrent: {
+        validate: ['jshint','validation']
   }
   });
 
@@ -73,7 +76,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('validate', ['jshint','validation']);
+  grunt.registerTask('validate', ['concurrent:validate']);
 
   
   
