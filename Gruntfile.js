@@ -44,7 +44,13 @@ module.exports = function(grunt) {
               }
       }
     }
-  }
+  },
+  bowerInstall: {
+      target: {
+        src: ['index.html']
+        
+      }
+    }
   });
 
   // Load the plugin that provides the "uglify" task.
