@@ -50,7 +50,22 @@ module.exports = function(grunt) {
         src: ['index.html']
         
       }
+  },
+  validation: {
+    options: {
+        
+        reportpath: false,
+        stoponerror: false,
+        doctype: "HTML5",
+        relaxerror: ['Element head is missing a required instance of child element title.']
+    },
+    files: {
+        src: [
+              'index.html',
+              'views/home.html'
+             ]
     }
+  }
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -58,6 +73,8 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('validate', ['jshint','validation']);
+
   
   
 

@@ -1,0 +1,26 @@
+<form name="coursedetails" data-ng-submit="submitted=true" novalidate>
+
+	<ul>
+		<li>
+			<label>Enter Course ID 
+				<input type="number" placeholder="Enter Course ID" data-ng-model="course.id"/>
+			</label>
+		</li>
+		<li>
+			<label>Enter Faculty Name
+				<input type="text" placeholder="Enter Faculty Name" name="facultyname" data-ng-model="course.facultyname" required/>
+			</label>
+			<div data-ng-show="coursedetails.facultyname.$touched">
+				<span data-ng-show="coursedetails.facultyname.$error.required">Please Enter the Faculty Name</span>
+			</div>
+			
+		</li>
+		
+	</ul>
+	
+	
+	
+	
+
+	
+</form>
