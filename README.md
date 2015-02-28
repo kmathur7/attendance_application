@@ -14,7 +14,7 @@ The main idea is to move from a pen & paper format to a digital format.
 ### Grunt Commands
 grunt validate: Will run JsHint and HTML Validators.
 
-grunt watch : Will watch for the scripts folder files and run the validate task when the files are changed.
+grunt watch : Will watch for the scripts and HTML files and run the jshint and validation task when these files change.
 
 grunt connect: Will start a local webserver on port 9001 and will open browser to http://localhost:9001
 

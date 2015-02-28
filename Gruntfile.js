@@ -23,13 +23,21 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'scripts/**/*.js']
   },
   watch: {
-  scripts: {
-    files: ['scripts/**/*.js'],
-    tasks: ['validate'],
-    options: {
-      spawn: false,
+    scripts: {
+      files: ['scripts/**/*.js'],
+      tasks: ['jshint'],
+      options: {
+      spawn: false
+      }
     },
-  },
+    html: {
+      files: ['views/**/*.html','index.html'],
+      tasks: ['validation'],
+      options: {
+      spawn: false
+      }
+    } 
+
   },
   connect: {
     server: {
@@ -75,7 +83,7 @@ module.exports = function(grunt) {
  require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['validate']);
   grunt.registerTask('validate', ['concurrent:validate']);
 
   

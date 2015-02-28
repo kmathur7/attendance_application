@@ -1,9 +1,14 @@
-<form name="coursedetails" data-ng-submit="submitted=true" novalidate>
+<form name="coursedetails" novalidate>
 
 	<ul>
 		<li>
 			<label>Enter Course ID 
 				<input type="number" placeholder="Enter Course ID" data-ng-model="course.id"/>
+			</label>
+		</li>
+		<li>
+			<label>Enter Course Name 
+				<input type="text" placeholder="Enter Course Name" data-ng-model="course.name"/>
 			</label>
 		</li>
 		<li>
@@ -13,7 +18,6 @@
 			<div data-ng-show="coursedetails.facultyname.$touched">
 				<span data-ng-show="coursedetails.facultyname.$error.required">Please Enter the Faculty Name</span>
 			</div>
-			
 		</li>
 		
 	</ul>
