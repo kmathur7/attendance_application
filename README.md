@@ -18,7 +18,7 @@ grunt watch : Will watch for the scripts and HTML files and run the jshint and v
 
 grunt connect: Will start a local webserver on port 9001 and will open browser to http://localhost:9001
 
-grunt bowerInstall: Will Inject your Bower dependencies right into your HTML.
+grunt wiredep: Will Inject your Bower dependencies right into your HTML.
 
 
 

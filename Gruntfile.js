@@ -53,10 +53,12 @@ module.exports = function(grunt) {
       }
     }
   },
-  bowerInstall: {
-      target: {
-        src: ['index.html']
-        
+  
+  wiredep: {
+    task: {
+      // Point to the files that should be updated when
+      // you run `grunt wiredep`
+      src: ['index.html']
       }
   },
   validation: {
