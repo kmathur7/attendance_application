@@ -20,5 +20,9 @@ grunt connect: Will start a local webserver on port 9001 and will open browser t
 
 grunt wiredep: Will Inject your Bower dependencies right into your HTML.
 
+### Running Tests
+
+karma start : will open chrome browser and run tests. 
+
 
 
