@@ -1,30 +1,35 @@
-<form name="coursedetails" novalidate>
+<div class="header">
+    	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        	<a class="pure-menu-heading" href="">Attendence</a>
+			<ul class="pure-menu-list">
+            	<li class="pure-menu-item pure-menu-selected"><a href="#/" class="pure-menu-link">Home</a></li>
+            	
+            	<li class="pure-menu-item"><a href="#/login" class="pure-menu-link">Sign In</a></li>
+        	</ul>
+    	</div>
+</div>
 
-	<ul>
-		<li>
-			<label>Enter Course ID 
-				<input type="number" placeholder="Enter Course ID" data-ng-model="course.id"/>
-			</label>
-		</li>
-		<li>
-			<label>Enter Course Name 
-				<input type="text" placeholder="Enter Course Name" data-ng-model="course.name"/>
-			</label>
-		</li>
-		<li>
-			<label>Enter Faculty Name
-				<input type="text" placeholder="Enter Faculty Name" name="facultyname" data-ng-model="course.facultyname" required/>
-			</label>
-			<div data-ng-show="coursedetails.facultyname.$touched">
-				<span data-ng-show="coursedetails.facultyname.$error.required">Please Enter the Faculty Name</span>
-			</div>
-		</li>
-		
-	</ul>
-	
-	
-	
-	
+<div class="splash-container">
+    <div class="splash">
+        <form name="course" novalidate>
+        	<p class="splash-subhead">
+        		Enter the Course ID
+        	</p>
+        	<input  type="text" class="transparentinput" name="courseid" autofocus data-ng-model="courseid" required>
+        	<p>
+            	<button class="pure-button buttoncolor" data-ng-click="query(courseid)">Ok</button>
+        	</p>
+        	<p data-ng-show="course.courseid.$touched">
+        		<span data-ng-show="course.courseid.$error.required" class="textcolor">Course ID cannot be empty.</span>
+        	</p>
+        	<p class="textcolor">{{message}}</p>
+        </form>
+    </div>
+</div>
 
-	
-</form>
+<div class="content-wrapper">
+	<div class="footer l-box is-center">
+         Made by the TEG Foundation Team.
+	</div>
+</div>
+

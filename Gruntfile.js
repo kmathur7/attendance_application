@@ -72,7 +72,7 @@ module.exports = function(grunt) {
     files: {
         src: [
               'index.html',
-              'views/home.html'
+              'views/*.html'
              ]
     }
   },

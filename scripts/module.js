@@ -6,7 +6,13 @@ angular.module('attendenceApplication',['ngRoute'])
         	templateUrl: 'views/home.html',
         	controller: 'HomeController'
       	})
-      	.otherwise({
+      .when('/attendence', {
+          templateUrl: 'views/attendence.html'
+        })
+      .when('/login', {
+          templateUrl: 'views/signin.html'
+        })
+      .otherwise({
         	redirectTo: '/'
       	});
   });
