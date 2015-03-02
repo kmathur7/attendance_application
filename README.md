@@ -1,5 +1,5 @@
-# Attendence Collection Application.
-Application designed to collect the participant's attendence during the training sessions. 
+# Attendance Collection Application.
+Application designed to collect the participant's attendance during the training sessions. 
 
 The main idea is to move from a pen & paper format to a digital format.
 
