@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     server: {
       options: {
         port: 9001,
-        base: '../attendence_application',
+        base: '../attendance_application',
         keepalive: true,
         open: {
                 target: 'http://localhost:9001', // target url to open
@@ -78,7 +78,20 @@ module.exports = function(grunt) {
   },
   concurrent: {
         validate: ['jshint','validation']
+  },
+  csslint: {
+    strict: {
+      options: {
+        import: 2
+      },
+      src: ['css/*.css']
+    }
+  },
+  karma: {
+  unit: {
+    configFile: 'karma.conf.js'
   }
+}
   });
 
   // Load the plugin that provides the "uglify" task.

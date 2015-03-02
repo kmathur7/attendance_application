@@ -3,17 +3,28 @@
 
   describe('HomeController', function(){
 
-    beforeEach(module('attendenceApplication'));
+    beforeEach(module('attendanceApplication'));
 
     it('should check if initial values of course variable are empty', inject(function($controller) {
     	var scope = {},
         ctrl = $controller('HomeController', {$scope:scope});
-		expect(scope.course.id).toBe("");
-		expect(scope.course.name).toBe("");
-		expect(scope.course.facultyname).toBe("");
-		expect(scope.course.startdate).toBe("");
-		expect(scope.course.enddate).toBe("");
+		    expect(scope.courseid).toBe("");
+		
     }));
+
+    it('should check the return message of the query function', inject(function($controller) {
+      var scope = {},
+        ctrl = $controller('HomeController', {$scope:scope});
+        scope.query(123);
+        expect(scope.message).toBe("123");
+
+        scope.query("asasdff");
+        expect(scope.message).toBe("Invalid Course ID");
+
+    
+    }));
+
+
    
 
   });

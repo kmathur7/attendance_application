@@ -1,10 +1,10 @@
 {
-  "name": "Attendence App",
+  "name": "Attendance App",
   "version": "0.1.0",
   "authors": [
     "Kunal Mathur <kunal.mathur@tcs.com>"
   ],
-  "description": "Application to collect attendence during training sessions",
+  "description": "Application to collect attendance during training sessions",
   "license": "MIT",
   "private": true,
   "ignore": [

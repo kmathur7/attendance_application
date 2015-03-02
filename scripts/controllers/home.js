@@ -1,13 +1,7 @@
-angular.module('attendenceApplication')
+angular.module('attendanceApplication')
 
 	.controller('HomeController',['$scope', function ($scope) {
-  	$scope.course= {
-  		id : "",
-  		name:"",
-  		facultyname:"",
-  		startdate:"",
-  		enddate:""
-  	};
+  	$scope.courseid = "";
 
     $scope.query = function(id){
       if(id==123){
