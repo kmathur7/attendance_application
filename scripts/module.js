@@ -13,6 +13,10 @@ angular.module('attendanceApplication',['ngRoute'])
       .when('/login', {
           templateUrl: 'views/signin.html'
         })
+      .when('/attendancedetails', {
+          templateUrl: 'views/attendancedetails.html',
+          controller: 'AttendanceDetailsController'
+        })
       .otherwise({
         	redirectTo: '/'
       	});
