@@ -11,21 +11,11 @@ angular.module('attendanceApplication')
     days: 5    
     };
 
-    $scope.hidecoursedatails = false;
-
-    $scope.test = function(){
-      console.log($scope.empid);
-    };
-
     $scope.getduration= function(){
-
       date1 = new Date ($scope.course.startdate).getTime();
       date2 = new Date ($scope.course.enddate).getTime();
-
-     
       var diff = date2 - date1;
       date = new Date (diff);
-
       return date;
     };
 

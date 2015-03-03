@@ -27,14 +27,10 @@ angular.module('attendanceApplication')
   };
     
     $scope.getduration= function(){
-
       date1 = new Date ($scope.course.startdate).getTime();
       date2 = new Date ($scope.course.enddate).getTime();
-
-     
       var diff = date2 - date1;
       date = new Date (diff);
-
       return date;
     };
 
