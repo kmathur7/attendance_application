@@ -7,7 +7,8 @@ angular.module('attendanceApplication',['ngRoute'])
         	controller: 'HomeController'
       	})
       .when('/attendance', {
-          templateUrl: 'views/attendance.html'
+          templateUrl: 'views/attendance.html',
+          controller: 'AttendanceController'
         })
       .when('/login', {
           templateUrl: 'views/signin.html'
