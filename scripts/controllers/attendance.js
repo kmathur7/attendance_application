@@ -24,7 +24,6 @@ angular.module('attendanceApplication')
 
      
       var diff = date2 - date1;
-      console.log(diff);
       date = new Date (diff);
 
       return date;
