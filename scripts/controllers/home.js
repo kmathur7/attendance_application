@@ -1,16 +1,16 @@
 angular.module('attendanceApplication')
 
-	.controller('HomeController',['$scope', function ($scope) {
-  	$scope.courseid = "";
-
-    $scope.query = function(id){
-      if(id==123){
-        $scope.message = "123";
-      }
-      else{
-        $scope.message = "Invalid Course ID";
-      }
+  .controller('HomeController',['$scope','$http', function ($scope,$http) {
+    $scope.course = {
+      id:""
     };
-  	$scope.newcourse = true;
-  	
+
+    $scope.query = function(course){
+      console.log(course.id);
+      $http.post('/courseid',course).success(function(res){
+        $scope.message=res;
+      });
+    };
+    
+    
   }]);

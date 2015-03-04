@@ -15,9 +15,9 @@
         	<p class="splash-subhead">
         		Enter the Course ID
         	</p>
-        	<input  type="text" class="transparentinput" name="courseid" autofocus data-ng-model="courseid" required>
+        	<input  type="text" class="transparentinput" name="courseid" autofocus data-ng-model="course.id" required>
         	<p>
-            	<button class="pure-button buttoncolor" data-ng-click="query(courseid)">Ok</button>
+            	<button class="pure-button buttoncolor" data-ng-click="query(course)">Ok</button>
         	</p>
         	<p data-ng-show="course.courseid.$touched">
         		<span data-ng-show="course.courseid.$error.required" class="textcolor">Course ID cannot be empty.</span>
