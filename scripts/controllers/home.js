@@ -1,14 +1,17 @@
 angular.module('attendanceApplication')
 
-  .controller('HomeController',['$scope','$http', function ($scope,$http) {
+  .controller('HomeController',['$scope','$rootScope','$http','courseDetailsService','$location', function ($scope,$rootScope,$http,courseDetailsService,$location) {
     $scope.course = {
       id:""
     };
 
     $scope.query = function(course){
-      console.log(course.id);
       $http.post('/courseid',course).success(function(res){
-        $scope.message=res;
+        courseDetailsService.setCourseDetails(res.data);
+        $rootScope.$broadcast('course');
+        $location.path('attendance');
+        
+
       });
     };
     

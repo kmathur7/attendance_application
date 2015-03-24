@@ -17,6 +17,10 @@ angular.module('attendanceApplication',['ngRoute'])
           templateUrl: 'views/attendancedetails.html',
           controller: 'AttendanceDetailsController'
         })
+      .when('/newcourse', {
+          templateUrl: 'views/newcourse.html',
+          controller: 'NewCourseController'
+        })
       .otherwise({
         	redirectTo: '/'
       	});

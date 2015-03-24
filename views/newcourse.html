@@ -1,0 +1,91 @@
+<div class="header">
+    	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        	<a class="pure-menu-heading" href="">Attendance</a>
+			<ul class="pure-menu-list">
+            	<li class="pure-menu-item"><a href="#/" class="pure-menu-link">Home</a></li>
+            	
+            	<li class="pure-menu-item"><a href="#/login" class="pure-menu-link">Sign In</a></li>
+        	</ul>
+    	</div>
+</div>
+<div class="content-wrapper content-wrapper1">
+    <div class="content">
+        <h2 class="content-head is-center">New Course</h2>
+
+        <div class="pure-g">
+            
+            <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1">
+                <h3 class="content-subhead">Course Details</h3>
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+                        <div class="pure-g">
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="course-code">Course Code</label>
+                                <input type="text" id="course-code" class="pure-u-23-24" data-ng-model="course.code" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="course-title">Course Title</label>
+                                <input type="text" id="course-title" class="pure-u-23-24" data-ng-model="course.title" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="centre">Centre/Branch</label>
+                                <input type="text" id="centre" class="pure-u-23-24" data-ng-model="course.centre" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="learning-venue">Learning Venue</label>
+                                <input type="text" id="learning-venue" class="pure-u-23-24" data-ng-model="course.venue" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="start-date">Start Date</label>
+                                <input type="date" id="start-date" class="pure-u-23-24" data-ng-model="course.startdate" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="end-date">End Date</label>
+                                <input type="date" id="end-date" class="pure-u-23-24"  data-ng-model="course.enddate" />
+                            </div>
+                        </div>
+                        <div class="pure-g">
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label>Trainer Details</label>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="empid">EmpID</label>
+                                <input type="number" id="empid" class="pure-u-23-24"  data-ng-model="course.faculty.empid" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="faculty-name">Faculty Name</label>
+                                <input type="text" id="faculty-name" class="pure-u-23-24"  data-ng-model="course.faculty.name" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="desgn">Desgn.</label>
+                                <input type="text" id="desgn" class="pure-u-23-24"  data-ng-model="course.faculty.desgn" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="email-id">Email ID</label>
+                                <input type="email" id="email-id" class="pure-u-23-24"  data-ng-model="course.faculty.email" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-6">
+                                <label for="project">Project</label>
+                                <input type="text" id="project" class="pure-u-23-24"  data-ng-model="course.faculty.project" />
+                            </div>
+                        </div>
+                        <button class="pure-button pure-button-primary" data-ng-click="show()">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+	<div class="footer l-box is-center">
+         Made by the TEG Foundation Team.
+	</div>
+</div>
