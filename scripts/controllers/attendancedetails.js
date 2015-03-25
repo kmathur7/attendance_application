@@ -1,15 +1,10 @@
 angular.module('attendanceApplication')
 
-	.controller('AttendanceDetailsController',['$scope', function ($scope) {
-  $scope.course = {
-    code : "00493172",
-    title : "DESS: Angular JS - Beginner - ILT",
-    centre : "Pune",
-    venue: "A1 TR5",
-    startdate:"2015-02-09",
-    enddate:"2015-02-13",
-    days: 5    
-    };
+	.controller('AttendanceDetailsController',['$scope','courseDetailsService', function ($scope,courseDetailsService) {
+  
+      $scope.course= courseDetailsService.getCourseDetails();
+      
+    
 
   $scope.participant = {
     empid : 673856,
@@ -26,13 +21,7 @@ angular.module('attendanceApplication')
 
   };
     
-    $scope.getduration= function(){
-      date1 = new Date ($scope.course.startdate).getTime();
-      date2 = new Date ($scope.course.enddate).getTime();
-      var diff = date2 - date1;
-      date = new Date (diff);
-      return date;
-    };
+  
 
     
   }]);

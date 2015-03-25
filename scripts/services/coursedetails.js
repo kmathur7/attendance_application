@@ -12,6 +12,7 @@ angular.module('attendanceApplication')
       },
       setCourseDetails: function(course){
         coursedata=course;
+
         
       }
     };

@@ -8,8 +8,8 @@ angular.module('attendanceApplication')
     $scope.query = function(course){
       $http.post('/courseid',course).success(function(res){
         courseDetailsService.setCourseDetails(res.data);
-        $rootScope.$broadcast('course');
         $location.path('attendance');
+        
         
 
       });
